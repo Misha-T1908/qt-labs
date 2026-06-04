@@ -15,6 +15,8 @@ build/
 build-*/
 cmake-build-*/
 out/
+pdf-text/
+qt-labs/
 
 # Generated binaries
 *.exe
@@ -22,4 +24,3 @@ out/
 *.so
 *.dylib
 *.app/
-
