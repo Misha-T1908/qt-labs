@@ -1,0 +1,3 @@
+Qt Widgets create desktop windows.
+Signals and slots connect actions.
+Layouts keep the interface adaptive.
