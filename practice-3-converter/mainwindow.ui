@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>520</width>
+    <height>260</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Converter</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    <property name="leftMargin">
+     <number>12</number>
+    </property>
+    <property name="topMargin">
+     <number>12</number>
+    </property>
+    <property name="rightMargin">
+     <number>12</number>
+    </property>
+    <property name="bottomMargin">
+     <number>12</number>
+    </property>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tabLength">
+       <attribute name="title">
+        <string>Length</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="lengthLayout">
+        <item>
+         <layout class="QGridLayout" name="lengthGridLayout">
+          <item row="0" column="0">
+           <widget class="QLineEdit" name="editLengthTop">
+            <property name="placeholderText">
+             <string>Value</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="comboLengthTopUnit">
+            <item>
+             <property name="text">
+              <string>meters (m)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>kilometers (km)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>inches (in)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>feet (ft)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>miles (mi)</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLineEdit" name="editLengthBottom">
+            <property name="placeholderText">
+             <string>Value</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="comboLengthBottomUnit">
+            <item>
+             <property name="text">
+              <string>kilometers (km)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>meters (m)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>inches (in)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>feet (ft)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>miles (mi)</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="lengthSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabMass">
+       <attribute name="title">
+        <string>Mass</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="massLayout">
+        <item>
+         <layout class="QGridLayout" name="massGridLayout">
+          <item row="0" column="0">
+           <widget class="QLineEdit" name="editMassTop">
+            <property name="placeholderText">
+             <string>Value</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="comboMassTopUnit">
+            <item>
+             <property name="text">
+              <string>kilograms (kg)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>pounds (lb)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ounces (oz)</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLineEdit" name="editMassBottom">
+            <property name="placeholderText">
+             <string>Value</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="comboMassBottomUnit">
+            <item>
+             <property name="text">
+              <string>pounds (lb)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>kilograms (kg)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ounces (oz)</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="massSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabTemperature">
+       <attribute name="title">
+        <string>Temperature</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="temperatureLayout">
+        <item>
+         <layout class="QGridLayout" name="temperatureGridLayout">
+          <item row="0" column="0">
+           <widget class="QLineEdit" name="editTemperatureTop">
+            <property name="placeholderText">
+             <string>Value</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="comboTemperatureTopUnit">
+            <item>
+             <property name="text">
+              <string>Celsius (°C)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Fahrenheit (°F)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Kelvin (K)</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLineEdit" name="editTemperatureBottom">
+            <property name="placeholderText">
+             <string>Value</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="comboTemperatureBottomUnit">
+            <item>
+             <property name="text">
+              <string>Fahrenheit (°F)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Celsius (°C)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Kelvin (K)</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="temperatureSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
