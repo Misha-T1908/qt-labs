@@ -1,4 +1,4 @@
-#include "lessonmodel.h"
+﻿#include "lessonmodel.h"
 
 void LessonModel::setText(const QString &text)
 {

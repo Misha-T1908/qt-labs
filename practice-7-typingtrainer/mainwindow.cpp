@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+﻿#include "mainwindow.h"
 #include "ui_mainwindow.h"
 
 #include <QComboBox>
@@ -28,7 +28,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->returnButton, &QPushButton::clicked, this, &MainWindow::onReturnToMain);
     connect(ui->lessonComboBox, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::onLessonChanged);
     connect(ui->testStepButton, &QPushButton::clicked, this, &MainWindow::onTestStep);
-    connect(ui->actionExit, &QAction::triggered, this, &MainWindow::close);
+    connect(ui->actionВихід, &QAction::triggered, this, &MainWindow::close);
     connect(ui->actionAbout, &QAction::triggered, this, &MainWindow::onAbout);
 
     loadSelectedLesson();
@@ -61,7 +61,7 @@ void MainWindow::onReturnToMain()
 
 void MainWindow::onAbout()
 {
-    QMessageBox::about(this, "Про програму", "TypingTrainer\nНавчальний тренажер набору тексту.");
+    QMessageBox::about(this, "Про програму", "Тренажер набору\nНавчальний тренажер набору тексту.");
 }
 
 void MainWindow::onLessonChanged(int index)
@@ -80,16 +80,16 @@ void MainWindow::onTestStep()
 void MainWindow::setupLessons()
 {
     lessonTexts = {
-        "Simple words for typing.\\nKeep your hands relaxed.\\nPractice every day.",
-        "Qt Widgets are useful for desktop apps.\\nSignals and slots connect actions.\\nLayouts keep windows adaptive.",
-        "Short text.\\nA longer line with commas, spaces, and dots.\\nEnd."
+        "Прості слова для набору.\\nТримайте руки спокійно.\\nТренуйтеся щодня.",
+        "Qt Widgets створює віконні програми.\\nСигнали і слоти з'єднують дії.\\nМакети роблять вікно гнучким.",
+        "Короткий текст.\\nДовший рядок з комами, пробілами та крапками.\\nКінець."
     };
 
     ui->lessonComboBox->clear();
     ui->lessonComboBox->addItem("Урок 1");
     ui->lessonComboBox->addItem("Урок 2");
     ui->lessonComboBox->addItem("Урок 3");
-    ui->lessonDescriptionLabel->setText("Оберіть урок і натисніть Start training.");
+    ui->lessonDescriptionLabel->setText("Оберіть урок і натисніть кнопку початку тренування.");
 }
 
 void MainWindow::loadSelectedLesson()

@@ -1,4 +1,4 @@
-#ifndef LESSONMODEL_H
+﻿#ifndef LESSONMODEL_H
 #define LESSONMODEL_H
 
 #include <QString>

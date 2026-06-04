@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+﻿#include "mainwindow.h"
 #include "ui_mainwindow.h"
 
 #include <QCoreApplication>
@@ -36,7 +36,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->testStepButton, &QPushButton::clicked, this, &MainWindow::onTestStep);
     connect(ui->randomLessonButton, &QPushButton::clicked, this, &MainWindow::onRandomLesson);
     connect(ui->reloadLessonsButton, &QPushButton::clicked, this, &MainWindow::onReloadLessons);
-    connect(ui->actionExit, &QAction::triggered, this, &MainWindow::close);
+    connect(ui->actionВихід, &QAction::triggered, this, &MainWindow::close);
     connect(ui->actionAbout, &QAction::triggered, this, &MainWindow::onAbout);
 
     scanLessons();
@@ -69,7 +69,7 @@ void MainWindow::onReturnToMain()
 
 void MainWindow::onAbout()
 {
-    QMessageBox::about(this, "Про програму", "TypingTrainer\nНавчальний тренажер набору тексту.");
+    QMessageBox::about(this, "Про програму", "Тренажер набору\nНавчальний тренажер набору тексту.");
 }
 
 void MainWindow::onLessonChanged(int index)

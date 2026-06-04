@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+﻿#include "mainwindow.h"
 #include "ui_mainwindow.h"
 
 #include <QCoreApplication>
@@ -46,7 +46,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->reloadLessonsButton, &QPushButton::clicked, this, &MainWindow::onReloadLessons);
     connect(ui->speedMetricComboBox, &QComboBox::currentTextChanged, this, &MainWindow::onSpeedMetricChanged);
     connect(sessionTimer, &QTimer::timeout, this, &MainWindow::onTimerTick);
-    connect(ui->actionExit, &QAction::triggered, this, &MainWindow::close);
+    connect(ui->actionВихід, &QAction::triggered, this, &MainWindow::close);
     connect(ui->actionAbout, &QAction::triggered, this, &MainWindow::onAbout);
 
     setupKeyboard();
@@ -86,7 +86,7 @@ void MainWindow::onReturnToMain()
 
 void MainWindow::onAbout()
 {
-    QMessageBox::about(this, "Про програму", "TypingTrainer\nНавчальний тренажер набору тексту.");
+    QMessageBox::about(this, "Про програму", "Тренажер набору\nНавчальний тренажер набору тексту.");
 }
 
 void MainWindow::onLessonChanged(int index)
@@ -214,7 +214,9 @@ void MainWindow::setupKeyboard()
     const auto buttons = ui->pageTraining->findChildren<QPushButton *>();
     for (QPushButton *button : buttons) {
         const QString text = button->text();
-        if (text.size() == 1 || text == "Space") {
+        if (button->objectName() == "keySpace") {
+            keyboardButtons.insert("SPACE", button);
+        } else if (text.size() == 1) {
             keyboardButtons.insert(text.toUpper(), button);
         }
     }
@@ -222,7 +224,7 @@ void MainWindow::setupKeyboard()
 
 void MainWindow::loadSettings()
 {
-    QSettings settings("QtLabs", "TypingTrainer");
+    QSettings settings("QtLabs", "Тренажер набору");
     savedLessonPath = settings.value("lesson/path").toString();
     const QString metric = settings.value("speed/metric", "CPM").toString();
     const int metricIndex = ui->speedMetricComboBox->findText(metric);
@@ -233,7 +235,7 @@ void MainWindow::loadSettings()
 
 void MainWindow::saveSettings()
 {
-    QSettings settings("QtLabs", "TypingTrainer");
+    QSettings settings("QtLabs", "Тренажер набору");
     settings.setValue("lesson/path", ui->lessonComboBox->currentData().toString());
     settings.setValue("speed/metric", ui->speedMetricComboBox->currentText());
 }
@@ -274,7 +276,7 @@ void MainWindow::finishSession()
     ui->resultTimeValueLabel->setText(formattedTime(finalElapsedMs));
     ui->resultSpeedValueLabel->setText(formattedSpeed(currentSpeed()));
     ui->resultAccuracyValueLabel->setText(ui->accuracyValueLabel->text());
-    ui->stackedWidget->setCurrentWidget(ui->pageResults);
+    ui->stackedWidget->setCurrentWidget(ui->pageРезультати);
 }
 
 void MainWindow::updateMetrics()

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>TypingTrainer</string>
+   <string>Тренажер набору</string>
   </property>
   <widget class="QStackedWidget" name="stackedWidget">
    <property name="currentIndex">
@@ -40,7 +40,7 @@
         </font>
        </property>
        <property name="text">
-        <string>TypingTrainer</string>
+        <string>Тренажер набору</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -48,7 +48,7 @@
       </widget>
      </item>
      <item>
-      <spacer name="startTopSpacer">
+      <spacer name="startTopПробілr">
        <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>
@@ -127,14 +127,14 @@
        <item>
         <widget class="QPushButton" name="startButton">
          <property name="text">
-          <string>Start training</string>
+          <string>Почати тренування</string>
          </property>
         </widget>
        </item>
       </layout>
      </item>
      <item>
-      <spacer name="startBottomSpacer">
+      <spacer name="startBottomПробілr">
        <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>
@@ -170,7 +170,7 @@
        <item>
         <widget class="QLabel" name="timeTitleLabel">
          <property name="text">
-          <string>Time</string>
+          <string>Час</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -190,7 +190,7 @@
        <item>
         <widget class="QLabel" name="speedTitleLabel">
          <property name="text">
-          <string>Speed</string>
+          <string>Швидкість</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -210,7 +210,7 @@
        <item>
         <widget class="QLabel" name="accuracyTitleLabel">
          <property name="text">
-          <string>Accuracy</string>
+          <string>Точність</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -360,13 +360,13 @@
         <widget class="QPushButton" name="keyM"><property name="text"><string>M</string></property></widget>
        </item>
        <item row="3" column="0" colspan="10">
-        <widget class="QPushButton" name="keySpace"><property name="text"><string>Space</string></property></widget>
+        <widget class="QPushButton" name="keySpace"><property name="text"><string>Пробіл</string></property></widget>
        </item>
       </layout>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="pageResults">
+   <widget class="QWidget" name="pageРезультати">
     <layout class="QVBoxLayout" name="resultsLayout">
      <property name="leftMargin">
       <number>24</number>
@@ -389,7 +389,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Results</string>
+        <string>Результати</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -399,19 +399,19 @@
      <item>
       <layout class="QFormLayout" name="resultsFormLayout">
        <item row="0" column="0">
-        <widget class="QLabel" name="resultTimeLabel"><property name="text"><string>Time</string></property></widget>
+        <widget class="QLabel" name="resultTimeLabel"><property name="text"><string>Час</string></property></widget>
        </item>
        <item row="0" column="1">
         <widget class="QLabel" name="resultTimeValueLabel"><property name="text"><string>00:00</string></property></widget>
        </item>
        <item row="1" column="0">
-        <widget class="QLabel" name="resultSpeedLabel"><property name="text"><string>Speed</string></property></widget>
+        <widget class="QLabel" name="resultSpeedLabel"><property name="text"><string>Швидкість</string></property></widget>
        </item>
        <item row="1" column="1">
         <widget class="QLabel" name="resultSpeedValueLabel"><property name="text"><string>0 CPM</string></property></widget>
        </item>
        <item row="2" column="0">
-        <widget class="QLabel" name="resultAccuracyLabel"><property name="text"><string>Accuracy</string></property></widget>
+        <widget class="QLabel" name="resultAccuracyLabel"><property name="text"><string>Точність</string></property></widget>
        </item>
        <item row="2" column="1">
         <widget class="QLabel" name="resultAccuracyValueLabel"><property name="text"><string>100%</string></property></widget>
@@ -423,14 +423,14 @@
        <item>
         <widget class="QPushButton" name="restartButton">
          <property name="text">
-          <string>Restart training</string>
+          <string>Повторити тренування</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="returnButton">
          <property name="text">
-          <string>Return to main</string>
+          <string>На головну</string>
          </property>
         </widget>
        </item>
@@ -450,27 +450,27 @@
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
-     <string>File</string>
+     <string>Файл</string>
     </property>
-    <addaction name="actionExit"/>
+    <addaction name="actionВихід"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
-     <string>Help</string>
+     <string>Довідка</string>
     </property>
     <addaction name="actionAbout"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuHelp"/>
   </widget>
-  <action name="actionExit">
+  <action name="actionВихід">
    <property name="text">
-    <string>Exit</string>
+    <string>Вихід</string>
    </property>
   </action>
   <action name="actionAbout">
    <property name="text">
-    <string>About</string>
+    <string>Про програму</string>
    </property>
   </action>
  </widget>

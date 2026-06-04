@@ -1,3 +1,3 @@
-Short line.
-A much longer line with several words and clear rhythm.
-Final line for the lesson.
+Короткий рядок.
+Довший рядок з кількома словами і чітким ритмом.
+Останній рядок для уроку.
