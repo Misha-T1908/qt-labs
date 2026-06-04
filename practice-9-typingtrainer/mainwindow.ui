@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>820</width>
+    <height>620</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TypingTrainer</string>
+  </property>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="pageStart">
+    <layout class="QVBoxLayout" name="startLayout">
+     <property name="leftMargin">
+      <number>24</number>
+     </property>
+     <property name="topMargin">
+      <number>24</number>
+     </property>
+     <property name="rightMargin">
+      <number>24</number>
+     </property>
+     <property name="bottomMargin">
+      <number>24</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="startTitleLabel">
+       <property name="font">
+        <font>
+         <pointsize>22</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>TypingTrainer</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="startTopSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QFormLayout" name="lessonFormLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="lessonLabel">
+         <property name="text">
+          <string>Урок</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="lessonComboBox"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="speedMetricLabel">
+         <property name="text">
+          <string>Метрика</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="speedMetricComboBox">
+         <item>
+          <property name="text">
+           <string>CPM</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WPM</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="lessonDescriptionLabel">
+       <property name="text">
+        <string>Опис уроку</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="startButtonsLayout">
+       <item>
+        <widget class="QPushButton" name="randomLessonButton">
+         <property name="text">
+          <string>Випадковий урок</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="reloadLessonsButton">
+         <property name="text">
+          <string>Оновити уроки</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="startButton">
+         <property name="text">
+          <string>Start training</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="startBottomSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>80</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="pageTraining">
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <layout class="QVBoxLayout" name="trainingLayout">
+     <property name="leftMargin">
+      <number>16</number>
+     </property>
+     <property name="topMargin">
+      <number>16</number>
+     </property>
+     <property name="rightMargin">
+      <number>16</number>
+     </property>
+     <property name="bottomMargin">
+      <number>16</number>
+     </property>
+     <item>
+      <layout class="QHBoxLayout" name="sessionInfoLayout">
+       <item>
+        <widget class="QLabel" name="timeTitleLabel">
+         <property name="text">
+          <string>Time</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="timeValueLabel">
+         <property name="text">
+          <string>00:00</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="speedTitleLabel">
+         <property name="text">
+          <string>Speed</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="speedValueLabel">
+         <property name="text">
+          <string>0 CPM</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="accuracyTitleLabel">
+         <property name="text">
+          <string>Accuracy</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="accuracyValueLabel">
+         <property name="text">
+          <string>100%</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="previousLineLabel">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>42</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="currentLineLabel">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Поточний рядок</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="testStepButton">
+       <property name="text">
+        <string>Крок</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="keyboardLayout">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="keyQ"><property name="text"><string>Q</string></property></widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="keyW"><property name="text"><string>W</string></property></widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="keyE"><property name="text"><string>E</string></property></widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QPushButton" name="keyR"><property name="text"><string>R</string></property></widget>
+       </item>
+       <item row="0" column="4">
+        <widget class="QPushButton" name="keyT"><property name="text"><string>T</string></property></widget>
+       </item>
+       <item row="0" column="5">
+        <widget class="QPushButton" name="keyY"><property name="text"><string>Y</string></property></widget>
+       </item>
+       <item row="0" column="6">
+        <widget class="QPushButton" name="keyU"><property name="text"><string>U</string></property></widget>
+       </item>
+       <item row="0" column="7">
+        <widget class="QPushButton" name="keyI"><property name="text"><string>I</string></property></widget>
+       </item>
+       <item row="0" column="8">
+        <widget class="QPushButton" name="keyO"><property name="text"><string>O</string></property></widget>
+       </item>
+       <item row="0" column="9">
+        <widget class="QPushButton" name="keyP"><property name="text"><string>P</string></property></widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="keyA"><property name="text"><string>A</string></property></widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="keyS"><property name="text"><string>S</string></property></widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="keyD"><property name="text"><string>D</string></property></widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QPushButton" name="keyF"><property name="text"><string>F</string></property></widget>
+       </item>
+       <item row="1" column="4">
+        <widget class="QPushButton" name="keyG"><property name="text"><string>G</string></property></widget>
+       </item>
+       <item row="1" column="5">
+        <widget class="QPushButton" name="keyH"><property name="text"><string>H</string></property></widget>
+       </item>
+       <item row="1" column="6">
+        <widget class="QPushButton" name="keyJ"><property name="text"><string>J</string></property></widget>
+       </item>
+       <item row="1" column="7">
+        <widget class="QPushButton" name="keyK"><property name="text"><string>K</string></property></widget>
+       </item>
+       <item row="1" column="8">
+        <widget class="QPushButton" name="keyL"><property name="text"><string>L</string></property></widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="keyZ"><property name="text"><string>Z</string></property></widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="keyX"><property name="text"><string>X</string></property></widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QPushButton" name="keyC"><property name="text"><string>C</string></property></widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QPushButton" name="keyV"><property name="text"><string>V</string></property></widget>
+       </item>
+       <item row="2" column="4">
+        <widget class="QPushButton" name="keyB"><property name="text"><string>B</string></property></widget>
+       </item>
+       <item row="2" column="5">
+        <widget class="QPushButton" name="keyN"><property name="text"><string>N</string></property></widget>
+       </item>
+       <item row="2" column="6">
+        <widget class="QPushButton" name="keyM"><property name="text"><string>M</string></property></widget>
+       </item>
+       <item row="3" column="0" colspan="10">
+        <widget class="QPushButton" name="keySpace"><property name="text"><string>Space</string></property></widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="pageResults">
+    <layout class="QVBoxLayout" name="resultsLayout">
+     <property name="leftMargin">
+      <number>24</number>
+     </property>
+     <property name="topMargin">
+      <number>24</number>
+     </property>
+     <property name="rightMargin">
+      <number>24</number>
+     </property>
+     <property name="bottomMargin">
+      <number>24</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="resultsTitleLabel">
+       <property name="font">
+        <font>
+         <pointsize>22</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Results</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QFormLayout" name="resultsFormLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="resultTimeLabel"><property name="text"><string>Time</string></property></widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="resultTimeValueLabel"><property name="text"><string>00:00</string></property></widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="resultSpeedLabel"><property name="text"><string>Speed</string></property></widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="resultSpeedValueLabel"><property name="text"><string>0 CPM</string></property></widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="resultAccuracyLabel"><property name="text"><string>Accuracy</string></property></widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLabel" name="resultAccuracyValueLabel"><property name="text"><string>100%</string></property></widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="resultsButtonsLayout">
+       <item>
+        <widget class="QPushButton" name="restartButton">
+         <property name="text">
+          <string>Restart training</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="returnButton">
+         <property name="text">
+          <string>Return to main</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>820</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
